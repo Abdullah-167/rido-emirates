@@ -85,7 +85,7 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="container">
+    <div className="container mx-auto">
       <div className="relative flex min-h-screen mb-20">
         {/* Left side - Assistance Section */}
         <div className="w-full max-w-[600px] bg-[#07aae7] text-white p-6 hidden md:flex flex-col justify-center">
