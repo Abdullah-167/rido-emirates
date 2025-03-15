@@ -46,7 +46,7 @@ const ServicesSection = () => {
           {/* Service 3: Casinos */}
           <div className="bg-white p-6 shadow-lg rounded-lg">
             <h3 className="text-2xl font-semibold text-blue-600 mb-4">
-              Rides to Dubai's Casinos
+             {` Rides to Dubai's Casinos`}
             </h3>
             <p className="text-lg mb-4">
               Arrive in style and luxury at the best casinos in Dubai, with a

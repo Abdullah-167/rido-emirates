@@ -150,7 +150,7 @@ const WhyChooseUs = () => {
               GPS Tracking
             </h3>
             <p className="text-gray-600">
-              We use advanced GPS tracking to monitor your vehicle's location,
+             {` We use advanced GPS tracking to monitor your vehicle's location,`}
               ensuring transparency and security.
             </p>
           </div>

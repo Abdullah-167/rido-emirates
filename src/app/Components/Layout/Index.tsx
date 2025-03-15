@@ -3,7 +3,11 @@ import Navbar from "./Navbar";
 import Footer from "./Footer";
 import ResponsiveNav from "./ResponsiveNav";
 
-const Layout = ({ children }: any) => {
+interface LayoutProps {
+  children: React.ReactNode;
+}
+
+const Layout = ({ children }: LayoutProps) => {
   return (
     <main>
       <Navbar />

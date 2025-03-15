@@ -9,7 +9,7 @@ const About = () => {
         <div className="space-y-6 mb-8 md:mb-0 md:w-1/2">
           <h2 className="text-4xl font-bold mb-4 text-[#07aae7]">About Rido Emirates</h2>
           <p className="text-xl">
-            At Rido Emirates, we take pride in being your trusted partner for commuting between Dubai and Abu Dhabi. We are committed to providing safe, affordable, and comfortable transportation services that meet the diverse needs of our customers. Whether you're traveling for business, leisure, or daily commuting, we ensure a seamless, reliable, and pleasant journey every time.
+           {` At Rido Emirates, we take pride in being your trusted partner for commuting between Dubai and Abu Dhabi. We are committed to providing safe, affordable, and comfortable transportation services that meet the diverse needs of our customers. Whether you're traveling for business, leisure, or daily commuting, we ensure a seamless, reliable, and pleasant journey every time.`}
           </p>
 
           <div className="space-y-4">
@@ -21,7 +21,7 @@ const About = () => {
             <div className="space-y-2">
               <h4 className="text-xl font-semibold text-[#07aae7]">Mission:</h4>
               <p className="text-lg">
-                We aim to offer premium car lift services while prioritizing our customers' needs, ensuring punctuality and comfort on every ride.
+              {`  We aim to offer premium car lift services while prioritizing our customers' needs, ensuring punctuality and comfort on every ride.`}
               </p>
             </div>
 

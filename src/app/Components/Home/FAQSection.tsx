@@ -27,7 +27,7 @@ const FAQSection = () => {
     },
   ];
 
-  const toggleAnswer = (index : any) => {
+  const toggleAnswer = (index: number) => {
     if (index === activeIndex) {
       setActiveIndex(0); // Close if the same question is clicked again
     } else {

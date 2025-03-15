@@ -3,8 +3,6 @@ import { useState } from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { Clock } from "lucide-react";
-import { useForm, ValidationError } from '@formspree/react';
-
 
 export default function BookingForm() {
   const [formData, setFormData] = useState({
@@ -17,16 +15,18 @@ export default function BookingForm() {
     rideType: "private",
   });
 
-  const handleChange = (e: any) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleDateChange = (date: any) => {
-    setFormData({ ...formData, date });
+  const handleDateChange = (date: Date | null) => {
+    if (date) {
+      setFormData({ ...formData, date });
+    }
   };
 
-  const handleSubmit = async (e: any) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     // Formspree endpoint (replace with your Formspree form ID)

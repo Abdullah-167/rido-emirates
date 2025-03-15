@@ -25,8 +25,8 @@ const Navbar = () => {
 
   return (
     <div
-      className={` md:block hidden fixed top-4 left-1/2 transform -translate-x-1/2 max-w-[1300px] w-full z-50 px-6 rounded-full transition-all duration-500 ${
-        scrolled ? "bg-white/80" : " bg-[#07aae7]/80"
+      className={`md:block hidden fixed top-4 left-1/2 transform -translate-x-1/2 max-w-[1300px] w-full z-50 px-6 rounded-full transition-all duration-500 ${
+        scrolled ? "bg-white/80" : "bg-[#07aae7]/80"
       }`}
     >
       <div className="flex items-center justify-between px-6 py-2">
@@ -35,9 +35,9 @@ const Navbar = () => {
             <Link href={"/"}>
               <Image
                 src="/data/logo.png" // Logo when scrolled
-                className={`max-h-[70px] object-cover transition-all duration-500 
-                ${scrolled ? "opacity-100 " : " opacity-0"}
-                `}
+                className={`max-h-[70px] object-cover transition-all duration-500 ${
+                  scrolled ? "opacity-100" : "opacity-0"
+                }`}
                 alt={"Logo"}
                 width={200}
                 height={100}
@@ -47,9 +47,9 @@ const Navbar = () => {
             <Link href={"/"}>
               <Image
                 src="/data/logo2.png"
-                className={`max-h-[70px] object-cover transition-all duration-500 
-                ${scrolled ? "opacity-0 " : " opacity-100"}
-                `}
+                className={`max-h-[70px] object-cover transition-all duration-500 ${
+                  scrolled ? "opacity-0" : "opacity-100"
+                }`}
                 alt={"Logo"}
                 width={300}
                 height={100}
@@ -58,7 +58,7 @@ const Navbar = () => {
           )}
         </div>
 
-        <div className="flex space-x-8 ">
+        <div className="flex space-x-8">
           <FlyoutLink href="/services" FlyoutContent={PricingContent}>
             Services
           </FlyoutLink>
@@ -68,13 +68,11 @@ const Navbar = () => {
         <div>
           <a
             href="/booking"
-            className={`relative  font-medium transition-all duration-500 px-3 py-2  rounded-full
-      ${
-        scrolled
-          ? "text-white hover:text-[#07aae7] bg-[#07aae7] hover:bg-transparent border hover:border-[#07aae7]"
-          : "hover:text-[#07aae7] hover:bg-white border border-white bg-transparent text-white"
-      }
-      `}
+            className={`relative font-medium transition-all duration-500 px-3 py-2 rounded-full ${
+              scrolled
+                ? "text-white hover:text-[#07aae7] bg-[#07aae7] hover:bg-transparent border hover:border-[#07aae7]"
+                : "hover:text-[#07aae7] hover:bg-white border border-white bg-transparent text-white"
+            }`}
           >
             Contact Us
           </a>
@@ -85,7 +83,12 @@ const Navbar = () => {
 };
 
 // Component for normal nav links without dropdown
-const NavLink = ({ children, href }: any) => {
+interface NavLinkProps {
+  children: React.ReactNode;
+  href: string;
+}
+
+const NavLink = ({ children, href }: NavLinkProps) => {
   const [scrolled, setScrolled] = useState(false);
 
   // Change the navbar style when the user scrolls
@@ -103,12 +106,13 @@ const NavLink = ({ children, href }: any) => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
   return (
     <a
       href={href}
-      className={`relative  font-medium transition-all duration-500
-      ${scrolled ? "text-black" : "text-white "}
-      `}
+      className={`relative font-medium transition-all duration-500 ${
+        scrolled ? "text-black" : "text-white"
+      }`}
     >
       {children}
     </a>
@@ -116,9 +120,15 @@ const NavLink = ({ children, href }: any) => {
 };
 
 // Flyout link (Dropdown) remains for Services
-const FlyoutLink = ({ children, href, FlyoutContent }: any) => {
+interface FlyoutLinkProps {
+  children: React.ReactNode;
+  href: string;
+  FlyoutContent: React.ComponentType;
+}
+
+const FlyoutLink = ({ children, href, FlyoutContent }: FlyoutLinkProps) => {
   const [open, setOpen] = useState(false);
-  const timeoutRef = useRef<any>(null);
+  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   const handleMouseEnter = () => {
     if (timeoutRef.current) clearTimeout(timeoutRef.current);
@@ -155,9 +165,9 @@ const FlyoutLink = ({ children, href, FlyoutContent }: any) => {
     >
       <a
         href={href}
-        className={`relative  font-medium transition-all duration-500
-        ${scrolled ? "text-black" : "text-white "}
-        `}
+        className={`relative font-medium transition-all duration-500 ${
+          scrolled ? "text-black" : "text-white"
+        }`}
       >
         {children}
         <span
