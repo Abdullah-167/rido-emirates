@@ -1,6 +1,19 @@
+"use client";
+
 import React from "react";
+import ReactPixel from "react-facebook-pixel";
 
 const Hero = () => {
+  const handleCallClick = () => {
+    ReactPixel.track("Contact");
+  };
+
+  const handleWhatsAppClick = () => {
+    ReactPixel.track("Lead", {
+      content_name: "WhatsApp Inquiry",
+    });
+  };
+
   return (
     <header className="mb-40 relative left-1/2 transform -translate-x-1/2 top-28 rounded-3xl w-full h-screen overflow-hidden max-h-[500px] max-w-[1300px]">
       {/* Background Video */}
@@ -17,6 +30,7 @@ const Hero = () => {
         {/* Call Us Now Button */}
         <a
           href="tel:+971507106162"
+          onClick={handleCallClick}
           className="px-6 py-3 bg-blue-600 text-white text-lg cursor-pointer font-semibold rounded-full shadow-lg hover:bg-blue-700 transition"
         >
           Call Us Now
@@ -25,6 +39,7 @@ const Hero = () => {
         {/* WhatsApp Now Button */}
         <a
           href="https://wa.me/971507106162"
+          onClick={handleWhatsAppClick}
           className="px-6 py-3 bg-blue-600 text-white text-lg cursor-pointer font-semibold rounded-full shadow-lg hover:bg-blue-700 transition"
         >
           Whatsapp Now

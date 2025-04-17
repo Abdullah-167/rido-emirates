@@ -3,11 +3,11 @@ import React from "react";
 
 const Nighttrip = () => {
   return (
-    <section className="pb-20 pt-40 bg-gradient-to-br from-gray-900 to-gray-800">
+    <section className="pb-20 pt-40 bg-[#002a6d]">
       <div className="container mx-auto px-6">
         {/* Header Section */}
         <div className="text-center mb-16">
-          <h1 className="text-5xl font-extrabold text-white mb-6 bg-clip-text text-transparent bg-gradient-to-r from-[#ff9a9e] to-[#fad0c4]">
+          <h1 className="text-5xl font-extrabold text-white mb-6 bg-clip-text text-transparent bg-gradient-to-r from-[#ff7e5f] to-[#feb47b]">
             Car Lift Services from Dubai to Abu Dhabi for Night Parties
           </h1>
           <p className="text-xl text-gray-300 max-w-2xl mx-auto">
@@ -26,7 +26,7 @@ const Nighttrip = () => {
 
         {/* Features of Car Lift Services */}
         <div className="mb-16">
-          <h2 className="text-4xl font-bold text-white mb-6 bg-clip-text text-transparent bg-gradient-to-r from-[#ff9a9e] to-[#fad0c4]">
+          <h2 className="text-4xl font-bold text-white mb-6 bg-clip-text text-transparent bg-gradient-to-r from-[#ff7e5f] to-[#feb47b]">
             Features of Car Lift Services
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -70,9 +70,9 @@ const Nighttrip = () => {
             ].map((item, index) => (
               <div
                 key={index}
-                className="bg-gray-800/50 backdrop-blur-lg p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 border border-gray-700/50 hover:border-[#ff9a9e] transform hover:-translate-y-2"
+                className="bg-[#2B7FFF] backdrop-blur-lg p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 border  transform hover:-translate-y-2"
               >
-                <div className="text-4xl mb-4 text-[#ff9a9e]">{item.icon}</div>
+                <div className="text-4xl mb-4 text-[#ff7e5f]">{item.icon}</div>
                 <h3 className="text-2xl font-bold text-white mb-4">
                   {item.title}
                 </h3>
@@ -84,7 +84,7 @@ const Nighttrip = () => {
 
         {/* Story Section */}
         <div className="mb-16">
-          <h2 className="text-4xl font-bold text-white mb-6 bg-clip-text text-transparent bg-gradient-to-r from-[#ff9a9e] to-[#fad0c4]">
+          <h2 className="text-4xl font-bold text-white mb-6 bg-clip-text text-transparent ">
             Why Choose Us for Night Parties?
           </h2>
           <div className="space-y-6">
@@ -115,7 +115,7 @@ const Nighttrip = () => {
 
         {/* Call to Action */}
         <div className="text-center">
-          <h2 className="text-4xl font-bold text-white mb-6 bg-clip-text text-transparent bg-gradient-to-r from-[#ff9a9e] to-[#fad0c4]">
+          <h2 className="text-4xl font-bold text-white mb-6 bg-clip-text text-transparent bg-gradient-to-r from-[#ff7e5f] to-[#feb47b]">
             Ready for an Unforgettable Night Out?
           </h2>
           <p className="text-gray-300 max-w-2xl mx-auto mb-8">
@@ -124,9 +124,11 @@ const Nighttrip = () => {
             transportation while you focus on making memories at Abu Dhabi’s
             vibrant nightlife.
           </p>
-          <button className="bg-gradient-to-r from-[#ff9a9e] to-[#fad0c4] text-white px-8 py-3 rounded-full font-semibold hover:shadow-lg transition-shadow duration-300">
+          <Link href={"/booking"}>
+          <button className="bg-[#2B7FFF] cursor-pointer text-white px-8 py-3 rounded-full font-semibold hover:shadow-lg transition-shadow duration-300">
             Book Now
           </button>
+          </Link>
         </div>
       </div>
     </section>

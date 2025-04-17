@@ -3,15 +3,15 @@ import React from "react";
 
 const AirportSec = () => {
   return (
-    <section className="pb-20 pt-40 bg-gradient-to-br from-gray-900 to-gray-800">
+    <section className="pb-20 pt-40 bg-gradient-to-br from-gray-50 to-gray-100">
       <div className="container mx-auto px-6">
         {/* Header Section */}
         <div className="text-center mb-16">
-          <h1 className="text-5xl font-extrabold text-white mb-6 bg-clip-text text-transparent bg-gradient-to-r from-[#ff9a9e] to-[#fad0c4]">
+          <h1 className="text-5xl font-extrabold text-gray-900 mb-6 bg-clip-text text-transparent bg-gradient-to-r from-[#07aae7] to-[#0d6efd]">
             Airport Car Lift: Dubai to Abu Dhabi Route – Your Stress-Free Travel
             Solution
           </h1>
-          <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
             Experience seamless and reliable transportation with Rido Emirate,
             your trusted partner for airport car lift services between Dubai and
             Abu Dhabi. Whether you’re catching a flight or returning home, our
@@ -27,17 +27,17 @@ const AirportSec = () => {
 
         {/* The Significance of Dubai to Abu Dhabi Route */}
         <div className="mb-16">
-          <h2 className="text-4xl font-bold text-white mb-6 bg-clip-text text-transparent bg-gradient-to-r from-[#ff9a9e] to-[#fad0c4]">
+          <h2 className="text-4xl font-bold text-gray-800 mb-6 bg-clip-text text-transparent bg-gradient-to-r from-[#07aae7] to-[#0d6efd]">
             The Significance of Dubai to Abu Dhabi Route
           </h2>
-          <p className="text-gray-300 mb-6">
+          <p className="text-gray-600 mb-6">
             The Dubai to Abu Dhabi route is a vital transportation link in the
             UAE, connecting the nation’s two key economic and cultural hubs.
             Both cities are renowned for their iconic landmarks, booming
             business sectors, and diverse cultural attractions, making them top
             destinations for millions of visitors each year.
           </p>
-          <p className="text-gray-300">
+          <p className="text-gray-600">
             Whether for business, leisure, or social visits, traveling between
             Dubai and Abu Dhabi is a daily necessity for both residents and
             tourists. The route serves as an essential connection, facilitating
@@ -47,7 +47,7 @@ const AirportSec = () => {
 
         {/* Why Hire Us for Dubai to Abu Dhabi Airport Car Lift? */}
         <div className="mb-16">
-          <h2 className="text-4xl font-bold text-white mb-6 bg-clip-text text-transparent bg-gradient-to-r from-[#ff9a9e] to-[#fad0c4]">
+          <h2 className="text-4xl font-bold text-gray-800 mb-6 bg-clip-text text-transparent bg-gradient-to-r from-[#07aae7] to-[#0d6efd]">
             Why Hire Us for Dubai to Abu Dhabi Airport Car Lift?
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -85,13 +85,13 @@ const AirportSec = () => {
             ].map((item, index) => (
               <div
                 key={index}
-                className="bg-gray-800/50 backdrop-blur-lg p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 border border-gray-700/50 hover:border-[#ff9a9e] transform hover:-translate-y-2"
+                className="bg-white/80 backdrop-blur-lg p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 border border-gray-200/50 hover:border-[#07aae7] transform hover:-translate-y-2"
               >
-                <div className="text-4xl mb-4 text-[#ff9a9e]">{item.icon}</div>
-                <h3 className="text-2xl font-bold text-white mb-4">
+                <div className="text-4xl mb-4">{item.icon}</div>
+                <h3 className="text-2xl font-bold text-gray-800 mb-4">
                   {item.title}
                 </h3>
-                <p className="text-gray-300">{item.description}</p>
+                <p className="text-gray-600">{item.description}</p>
               </div>
             ))}
           </div>
@@ -99,23 +99,21 @@ const AirportSec = () => {
 
         {/* Call to Action */}
         <div className="text-center">
-          <h2 className="text-4xl font-bold text-white mb-6 bg-clip-text text-transparent bg-gradient-to-r from-[#ff9a9e] to-[#fad0c4]">
+          <h2 className="text-4xl font-bold text-gray-800 mb-6 bg-clip-text text-transparent bg-gradient-to-r from-[#07aae7] to-[#0d6efd]">
             Ready for a Stress-Free Journey?
           </h2>
-          <p className="text-gray-300 max-w-2xl mx-auto mb-8">
+          <p className="text-gray-600 max-w-2xl mx-auto mb-8">
             Choose Rido Emirate for reliable, comfortable, and affordable
             airport car lift services between Dubai and Abu Dhabi. Book your
             ride today and experience the difference!
           </p>
-          <Link href={"/booking"}>
-            <button className="cursor-pointer bg-blue-500 text-white py-2 px-6 rounded-full mt-4">
-              Book Your Ride Now
-            </button>
-          </Link>
+          <button className="bg-gradient-to-r from-[#07aae7] to-[#0d6efd] text-white px-8 py-3 rounded-full font-semibold hover:shadow-lg transition-shadow duration-300">
+            Book Now
+          </button>
         </div>
       </div>
     </section>
   );
 };
 
-export default AirportSec;
+export default AirportSec;  
