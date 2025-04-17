@@ -1,14 +1,16 @@
 "use client";
 
 import { useEffect } from "react";
-import ReactPixel from "react-facebook-pixel";
 
 const PixelTracker = () => {
   useEffect(() => {
+    // Only run on client side
     if (typeof window !== "undefined") {
-      const pixelId = "1890458138414794";
-      ReactPixel.init(pixelId);
-      ReactPixel.pageView();
+      import("react-facebook-pixel").then((ReactPixel) => {
+        const pixelId = "1890458138414794";
+        ReactPixel.default.init(pixelId);
+        ReactPixel.default.pageView();
+      });
     }
   }, []);
 

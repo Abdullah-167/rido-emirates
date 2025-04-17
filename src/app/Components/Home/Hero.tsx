@@ -1,15 +1,32 @@
 "use client";
 
 import React from "react";
-import ReactPixel from "react-facebook-pixel";
+
+// Add type definitions for Facebook Pixel events
+type FacebookPixelEventData = {
+  content_name?: string;
+  content_category?: string;
+  content_ids?: string[];
+  content_type?: string;
+  value?: number;
+  currency?: string;
+  // Add other possible Facebook Pixel parameters as needed
+};
 
 const Hero = () => {
+  const trackEvent = async (event: string, data?: FacebookPixelEventData) => {
+    if (typeof window !== "undefined") {
+      const ReactPixel = (await import("react-facebook-pixel")).default;
+      ReactPixel.track(event, data);
+    }
+  };
+
   const handleCallClick = () => {
-    ReactPixel.track("Contact");
+    trackEvent("Contact");
   };
 
   const handleWhatsAppClick = () => {
-    ReactPixel.track("Lead", {
+    trackEvent("Lead", {
       content_name: "WhatsApp Inquiry",
     });
   };
